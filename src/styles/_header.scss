@@ -1,0 +1,25 @@
+.header {
+    height: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-img {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__img-avatar {
+    width: 2.5rem;
+}
+
+
+
+
+
+.nav {
+    position: absolute;
+    display: none;
+}
