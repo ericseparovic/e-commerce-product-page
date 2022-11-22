@@ -2,6 +2,7 @@ import IconMenu from "../assets/icon-menu.svg";
 import LogoSneakers from "../assets/logo.svg";
 import IconCart from "../assets/icon-cart.svg";
 import Avatar from "../assets/image-avatar.png";
+import Nav from "../components/Nav";
 
 function Header() {
   return (
