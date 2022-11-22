@@ -1,16 +1,50 @@
 .main {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 .main__products {
     display: flex;
     width: 400%;
     transition: all 500ms ease;
-    transform: translateX(-0%)
+    transform: translateX(0%);
 }
 
 .main__img-product {
     width: calc(100% / 4);
+}
+
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.btn {
+
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    background-color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+}
+
+.btn-next {
+    right: 2rem;
+
+}
+
+
+
+.btn-previous {
+    left: 2rem;
+
 }
