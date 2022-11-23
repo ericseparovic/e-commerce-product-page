@@ -48,3 +48,138 @@
     left: 2rem;
 
 }
+
+.main__product-info {
+    padding: 2rem;
+}
+
+.main__product-info-p {
+    color: $Orange;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.main__product-info-h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+.main__product-description {
+    color: $DarkGrayishBlue;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.main__product-info-cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__product-cost {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.main__product-cost-porcent {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main__product-porcent {
+    background-color: $PaleOrange;
+    color: $Orange;
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: .7rem;
+    font-weight: bold;
+}
+
+
+.main_product-discount {
+    color: $GrayishBlue;
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding-right: 1rem;
+}
+
+
+.main__product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+
+.main__product-input {
+    width: 100%;
+    padding: 1.4rem 1.4rem 1.2rem 1.4rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background-color: $LightGrayishBlue;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: $fontFamily;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn-count-container {
+    position: relative;
+    width: 100%;
+}
+
+.btn-count {
+    position: absolute;
+    background-color: $LightGrayishBlue;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+
+.btn-minus {
+    left: 1rem;
+    top: 50%;
+
+}
+
+.btn-plus {
+    right: 1rem;
+    top: calc(50% - 6px);
+}
+
+
+.btn-cart {
+    width: 100%;
+    padding: 1.6rem 1.6rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background-color: $Orange;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: $fontFamily;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    color: white;
+}
