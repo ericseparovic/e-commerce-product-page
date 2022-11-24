@@ -1,19 +1,19 @@
-import IconMenu from "../assets/icon-menu.svg";
+import IconMenu from "./Icons/IconMenu";
 import Logo from "./Logo";
 import Nav from "../components/Nav";
-import Cart from "./Cart";
+import IconCart from "./Icons/IconCart";
 import Avatar from "../components/Avatar";
 
 function Header() {
   return (
     <header className="header">
       <div className="container-img">
-        <img className="header__img-menu" src={IconMenu} alt="icon-menu" />
+        <IconMenu />
         <Logo />
       </div>
       <Nav />
       <div className="container-img">
-        <Cart />
+        <IconCart />
         <Avatar />
       </div>
     </header>

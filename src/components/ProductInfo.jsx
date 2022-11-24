@@ -1,6 +1,6 @@
-import Cart from "./Cart";
-import IconPlus from "../assets/icon-plus.svg";
-import IconMinus from "../assets/icon-minus.svg";
+import IconCart from "./Icons/IconCart";
+import IconPlus from "./Icons/IconPlus";
+import IconMinus from "./Icons/IconMinus";
 
 function ProductInfo() {
   return (
@@ -23,15 +23,19 @@ function ProductInfo() {
       <div className="main__product-buttons">
         <div className="btn-count-container">
           <button className="btn-count btn-minus">
-            <img src={IconMinus} alt="icon-minus" />
+            <IconMinus />
           </button>
-          <input value={0} className="main__product-input" type="number" />
+          <input
+            className="main__product-input"
+            type="number"
+            placeholder="0"
+          />
           <button className="btn-count btn-plus">
-            <img src={IconPlus} alt="icon-plus" />
+            <IconPlus />
           </button>
         </div>
         <button className="btn-cart">
-          <Cart />
+          <IconCart />
           Add to cart
         </button>
       </div>

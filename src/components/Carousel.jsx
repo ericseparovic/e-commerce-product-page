@@ -2,17 +2,17 @@ import ImgProduct1 from "../assets/image-product-1.jpg";
 import ImgProduct2 from "../assets/image-product-2.jpg";
 import ImgProduct3 from "../assets/image-product-3.jpg";
 import ImgProduct4 from "../assets/image-product-4.jpg";
-import IconPrevious from "../assets/icon-previous.svg";
-import IconNext from "../assets/icon-next.svg";
+import IconPrevious from "./Icons/IconPrevious";
+import IconNext from "./Icons/IconNext";
 
 function Carousel() {
   return (
     <section className="carousel">
       <div className="btn btn-previous">
-        <img src={IconPrevious} alt="icon-previous" />
+        <IconPrevious />
       </div>
       <div className="btn btn-next">
-        <img src={IconNext} alt="icon-next" />
+        <IconNext />
       </div>
       <section className="main__products">
         <img className="main__img-product" src={ImgProduct1} alt="Product 1" />

@@ -1,9 +1,9 @@
-import IconClose from "../assets/icon-close.svg";
+import IconClose from "./Icons/IconClose";
 
 function Nav() {
   return (
     <nav className="nav">
-      <img className="nav__img-close" src={IconClose} alt="icon-close" />
+      <IconClose />
       <a className="nav__a" href="#">
         Collections
       </a>
