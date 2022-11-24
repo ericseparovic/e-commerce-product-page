@@ -27,18 +27,21 @@
     top: 50%;
     z-index: 1000;
     background-color: white;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     display: grid;
     place-items: center;
     cursor: pointer;
     transform: translateY(-50%);
 
+
 }
+
 
 .btn-next {
     right: 2rem;
+    padding-left: 0.3rem;
 
 }
 
@@ -46,6 +49,7 @@
 
 .btn-previous {
     left: 2rem;
+    padding-right: 0.3rem;
 
 }
 
@@ -182,4 +186,5 @@ input[type=number] {
     gap: 2rem;
     justify-content: center;
     color: white;
+
 }
