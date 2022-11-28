@@ -6,14 +6,16 @@ import IconPrevious from "./Icons/IconPrevious";
 import IconNext from "./Icons/IconNext";
 
 function Carousel() {
+  const handleChangePhoto = (e) => {
+    const imgProducts = document.querySelector(".main__products");
+    let postion = 0;
+
+    console.log(e.target.classList);
+  };
   return (
     <section className="carousel">
-      <div className="btn btn-previous">
-        <IconPrevious />
-      </div>
-      <div className="btn btn-next">
-        <IconNext />
-      </div>
+      <IconPrevious handleChangePhoto={handleChangePhoto} />
+      <IconNext handleChangePhoto={handleChangePhoto} />
       <section className="main__products">
         <img className="main__img-product" src={ImgProduct1} alt="Product 1" />
         <img className="main__img-product" src={ImgProduct2} alt="Product 2" />

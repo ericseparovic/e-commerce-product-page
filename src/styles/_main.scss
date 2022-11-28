@@ -24,24 +24,16 @@
 .btn {
 
     position: absolute;
-    top: 50%;
-    z-index: 1000;
-    background-color: white;
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
+    z-index: 1;
     cursor: pointer;
-    transform: translateY(-50%);
-
-
+    border-radius: 50%;
+    background-color: white;
+    top: 50%;
 }
 
 
 .btn-next {
     right: 2rem;
-    padding-left: 0.3rem;
 
 }
 
@@ -49,7 +41,6 @@
 
 .btn-previous {
     left: 2rem;
-    padding-right: 0.3rem;
 
 }
 
