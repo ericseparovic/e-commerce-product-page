@@ -1,6 +1,7 @@
-function IconPrevious({ handleChangePhoto }) {
+function IconPrevious({ handlePrevious }) {
   return (
     <svg
+      onClick={handlePrevious}
       className="btn btn-previous"
       width="40"
       height="40"

@@ -1,6 +1,7 @@
-function IconNext({ handleChangePhoto }) {
+function IconNext({ handleNext }) {
   return (
     <svg
+      onClick={handleNext}
       className="btn btn-next"
       width="40"
       height="40"
