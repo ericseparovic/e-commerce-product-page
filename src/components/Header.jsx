@@ -10,11 +10,16 @@ function Header() {
 
   const handleMenu = (e) => {
     const nav = document.querySelector(".nav");
+    const bgOpacity = document.querySelector(".bg-opacity");
+
     if (!statusMenu) {
       nav.style.transform = `translateX(0%)`;
+      bgOpacity.style.visibility = "visible";
+
       setStatusMenu(true);
     } else {
       nav.style.transform = `translateX(-100%)`;
+      bgOpacity.style.visibility = "hidden";
       setStatusMenu(false);
     }
   };
