@@ -7,9 +7,9 @@ import Avatar from "../components/Avatar";
 
 function Header() {
   const [statusMenu, setStatusMenu] = useState(false);
-  const nav = document.querySelector(".nav");
 
   const handleMenu = (e) => {
+    const nav = document.querySelector(".nav");
     if (!statusMenu) {
       nav.style.transform = `translateX(0%)`;
       setStatusMenu(true);
