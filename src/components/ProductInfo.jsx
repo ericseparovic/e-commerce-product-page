@@ -1,6 +1,6 @@
-import IconCart from "./Icons/IconCart";
 import IconPlus from "./Icons/IconPlus";
 import IconMinus from "./Icons/IconMinus";
+import Button from "../components/Button";
 
 function ProductInfo() {
   return (
@@ -34,10 +34,7 @@ function ProductInfo() {
             <IconPlus />
           </button>
         </div>
-        <button className="btn-cart">
-          <IconCart />
-          Add to cart
-        </button>
+        <Button icon={true} value={"Add to cart"} />
       </div>
     </section>
   );
