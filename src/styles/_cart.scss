@@ -1,0 +1,39 @@
+.header {
+    position: relative;
+
+
+
+    &__cart-container {
+        background-color: $White;
+        max-width: 350px;
+        max-height: 330px;
+        height: 100vh;
+        width: 100vh;
+        position: absolute;
+        z-index: 4;
+        top: 7rem;
+        border-radius: 1rem;
+    }
+
+
+    &__cart-h4 {
+        color: $DarkGrayishBlue;
+        padding: 1.5rem;
+        border-bottom: .5px solid $GrayishBlue;
+        margin: 0;
+    }
+
+    &__cart-basket {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // height: 280px;
+        height: calc(100% - 50px);
+        opacity: 0.5;
+    }
+
+    &__cart-p {
+        color: $DarkGrayishBlue;
+        text-align: center;
+    }
+}

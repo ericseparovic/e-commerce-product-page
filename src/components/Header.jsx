@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Nav from "../components/Nav";
 import IconCart from "./Icons/IconCart";
 import Avatar from "../components/Avatar";
+import Cart from "./Cart";
 
 function Header() {
   const [statusMenu, setStatusMenu] = useState(false);
@@ -31,6 +32,7 @@ function Header() {
         <Logo />
       </div>
       <Nav handleMenu={handleMenu} />
+      <Cart />
       <div className="container-img">
         <IconCart />
         <Avatar />
