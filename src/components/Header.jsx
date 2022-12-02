@@ -34,6 +34,7 @@ function Header() {
       <Nav handleMenu={handleMenu} />
       <Cart />
       <div className="container-img">
+        <div className="cart-count">0</div>
         <IconCart />
         <Avatar />
       </div>

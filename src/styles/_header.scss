@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    position: relative;
 }
 
 .header__img-avatar {
@@ -74,5 +75,23 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
     visibility: hidden;
+
+}
+
+
+.cart-count {
+    background-color: $Orange;
+    color: $White;
+    font-size: 1rem;
+    border-radius: 1rem;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.8rem 0.5rem 0.8rem;
+    position: absolute;
+    top: -2px;
+    right: 41px;
 
 }
