@@ -25,6 +25,19 @@ function Header() {
     }
   };
 
+  const [statusBasket, setStatusBasket] = useState(false);
+
+  const handleCartBasket = () => {
+    const basket = document.querySelector(".header__cart-container");
+    if (!statusBasket) {
+      basket.style.transform = "translateY(0%)";
+      setStatusBasket(true);
+    } else {
+      basket.style.transform = "translateY(-140%)";
+      setStatusBasket(false);
+    }
+  };
+
   return (
     <header className="header">
       <div className="container-img">
@@ -35,7 +48,7 @@ function Header() {
       <Cart />
       <div className="container-img">
         <div className="cart-count">0</div>
-        <IconCart />
+        <IconCart handleCartBasket={handleCartBasket} />
         <Avatar />
       </div>
     </header>
