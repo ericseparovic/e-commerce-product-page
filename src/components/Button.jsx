@@ -1,9 +1,9 @@
 import IconCart from "./Icons/IconCart";
 
-function Button({ value, icon }) {
+function Button({ value, icon, handleAddToCart }) {
   if (icon === true) {
     return (
-      <button className="btn-cart">
+      <button onClick={handleAddToCart} className="btn-cart">
         <IconCart />
         {value}
       </button>

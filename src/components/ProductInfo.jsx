@@ -2,7 +2,31 @@ import IconPlus from "./Icons/IconPlus";
 import IconMinus from "./Icons/IconMinus";
 import Button from "../components/Button";
 
-function ProductInfo() {
+function ProductInfo({ setProductInfo }) {
+  const handleAddToCart = () => {
+    const productInfoHTML = document.querySelector(".main__product-info");
+    const img = document.querySelector(".main__img-product").src;
+
+    const titleHTML = productInfoHTML.querySelector(
+      ".main__product-info-h1"
+    ).innerHTML;
+    const costHTML = productInfoHTML.querySelector(
+      ".main__product-cost"
+    ).innerHTML;
+    const countHTML = productInfoHTML.querySelector(
+      ".main__product-input"
+    ).value;
+
+    const info = {
+      title: titleHTML,
+      cost: costHTML,
+      count: countHTML,
+      img: img,
+    };
+
+    setProductInfo(info);
+  };
+
   return (
     <section className="main__product-info">
       <p className="main__product-info-p">Sneaker Company</p>
@@ -28,13 +52,18 @@ function ProductInfo() {
           <input
             className="main__product-input"
             type="number"
-            placeholder="0"
+            placeholder="1"
+            defaultValue={1}
           />
           <button className="btn-count btn-plus">
             <IconPlus />
           </button>
         </div>
-        <Button icon={true} value={"Add to cart"} />
+        <Button
+          handleAddToCart={handleAddToCart}
+          icon={true}
+          value={"Add to cart"}
+        />
       </div>
     </section>
   );

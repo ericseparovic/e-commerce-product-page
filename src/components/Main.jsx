@@ -1,11 +1,11 @@
 import Carousel from "./Carousel";
 import ProductInfo from "./ProductInfo";
 
-function Main() {
+function Main({ setProductInfo }) {
   return (
     <main className="main">
       <Carousel />
-      <ProductInfo />
+      <ProductInfo setProductInfo={setProductInfo} />
     </main>
   );
 }
