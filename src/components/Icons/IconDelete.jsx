@@ -1,10 +1,12 @@
-function IconDelete() {
+function IconDelete({ handleDelete }) {
   return (
     <svg
       width="14"
       height="16"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      onClick={handleDelete}
+      className="icon-delete"
     >
       <defs>
         <path

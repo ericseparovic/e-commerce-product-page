@@ -18,7 +18,11 @@ function App() {
   return (
     <>
       <div className="bg-opacity"></div>
-      <Header productInfo={productInfo} count={count} />
+      <Header
+        productInfo={productInfo}
+        count={count}
+        setProductInfo={setProductInfo}
+      />
       <Main
         setProductInfo={setProductInfo}
         handleCountMinus={handleCountMinus}

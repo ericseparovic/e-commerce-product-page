@@ -1,7 +1,8 @@
 import IconDelete from "../components/Icons/IconDelete";
 
-function ProductBasket({ productInfo }) {
+function ProductBasket({ productInfo, handleDelete }) {
   const { title, cost, count, img } = productInfo;
+
   return (
     <div className="header__cart-product">
       <div className="header__cart-product-item">
@@ -17,7 +18,7 @@ function ProductBasket({ productInfo }) {
           </div>
         </div>
       </div>
-      <IconDelete />
+      <IconDelete handleDelete={handleDelete} />
     </div>
   );
 }
