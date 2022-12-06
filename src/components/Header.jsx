@@ -6,7 +6,7 @@ import IconCart from "./Icons/IconCart";
 import Avatar from "../components/Avatar";
 import Cart from "./Cart";
 
-function Header({ productInfo }) {
+function Header({ productInfo, count }) {
   const [statusMenu, setStatusMenu] = useState(false);
 
   const handleMenu = (e) => {
@@ -47,7 +47,7 @@ function Header({ productInfo }) {
       <Nav handleMenu={handleMenu} />
       <Cart productInfo={productInfo} />
       <div className="container-img">
-        <div className="cart-count">0</div>
+        <div className="cart-count">{count}</div>
         <IconCart handleCartBasket={handleCartBasket} />
         <Avatar />
       </div>

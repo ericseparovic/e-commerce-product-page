@@ -1,5 +1,4 @@
 import IconDelete from "../components/Icons/IconDelete";
-import ImgProduct1 from "../assets/image-product-1.jpg";
 
 function ProductBasket({ productInfo }) {
   const { title, cost, count, img } = productInfo;

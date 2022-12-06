@@ -152,7 +152,7 @@ input[type=number] {
 
 .btn-minus {
     left: 1rem;
-    top: 50%;
+    top: calc(50% - 6px);
 
 }
 

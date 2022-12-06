@@ -2,7 +2,12 @@ import IconPlus from "./Icons/IconPlus";
 import IconMinus from "./Icons/IconMinus";
 import Button from "../components/Button";
 
-function ProductInfo({ setProductInfo }) {
+function ProductInfo({
+  setProductInfo,
+  handleCountMinus,
+  handleCountPlus,
+  count,
+}) {
   const handleAddToCart = () => {
     const productInfoHTML = document.querySelector(".main__product-info");
     const img = document.querySelector(".main__img-product").src;
@@ -46,16 +51,19 @@ function ProductInfo({ setProductInfo }) {
 
       <div className="main__product-buttons">
         <div className="btn-count-container">
-          <button className="btn-count btn-minus">
+          <button
+            onClick={handleCountMinus}
+            className="btn-count btn-minus minus"
+          >
             <IconMinus />
           </button>
           <input
+            id="count-input"
             className="main__product-input"
             type="number"
-            placeholder="1"
-            defaultValue={1}
+            value={count || 1}
           />
-          <button className="btn-count btn-plus">
+          <button className="btn-count btn-plus plus" onClick={handleCountPlus}>
             <IconPlus />
           </button>
         </div>
