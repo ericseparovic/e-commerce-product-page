@@ -2,7 +2,7 @@ import IconClose from "./Icons/IconClose";
 
 function Nav({ handleMenu }) {
   return (
-    <nav className="nav">
+    <nav className="nav--mobile nav--desktop">
       <IconClose handleMenu={handleMenu} />
       <a className="nav__a" href="#">
         Collections

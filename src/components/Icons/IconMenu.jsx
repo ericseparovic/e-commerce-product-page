@@ -3,8 +3,8 @@ function IconMenu({ handleMenu }) {
     <svg
       className="icon-menu"
       onClick={handleMenu}
-      width="16"
-      height="15"
+      width="18"
+      height="17"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

@@ -10,7 +10,7 @@ function Header({ productInfo, count, setProductInfo }) {
   const [statusMenu, setStatusMenu] = useState(false);
 
   const handleMenu = (e) => {
-    const nav = document.querySelector(".nav");
+    const nav = document.querySelector(".nav--mobile");
     const bgOpacity = document.querySelector(".bg-opacity");
 
     if (!statusMenu) {
@@ -33,23 +33,38 @@ function Header({ productInfo, count, setProductInfo }) {
       basket.style.transform = "translateY(0%)";
       setStatusBasket(true);
     } else {
-      basket.style.transform = "translateY(-140%)";
+      basket.style.transform = "translateY(-160%)";
       setStatusBasket(false);
     }
   };
 
+  window.addEventListener("resize", (e) => {
+    const nav = document.querySelector(".nav--mobile");
+    const bgOpacity = document.querySelector(".bg-opacity");
+    if (screen.width >= 1439) {
+      nav.style.transform = `translateX(0%)`;
+      bgOpacity.style.visibility = "hidden";
+    } else {
+      nav.style.transform = `translateX(-100%)`;
+      bgOpacity.style.visibility = "hidden";
+      setStatusMenu(false);
+    }
+  });
+
   return (
     <header className="header">
-      <div className="container-img">
-        <IconMenu handleMenu={handleMenu} />
-        <Logo />
-      </div>
-      <Nav handleMenu={handleMenu} />
-      <Cart productInfo={productInfo} setProductInfo={setProductInfo} />
-      <div className="container-img">
-        <div className="cart-count">{productInfo == "" ? 0 : count || 0}</div>
-        <IconCart handleCartBasket={handleCartBasket} />
-        <Avatar />
+      <div className="header--container">
+        <div className="container-img">
+          <IconMenu handleMenu={handleMenu} />
+          <Logo />
+          <Nav handleMenu={handleMenu} />
+        </div>
+        <Cart productInfo={productInfo} setProductInfo={setProductInfo} />
+        <div className="container-img">
+          <div className="cart-count">{productInfo == "" ? 0 : count || 0}</div>
+          <IconCart handleCartBasket={handleCartBasket} />
+          <Avatar />
+        </div>
       </div>
     </header>
   );
