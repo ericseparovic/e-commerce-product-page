@@ -11,7 +11,7 @@
     align-items: center;
     max-width: 1440px;
     position: relative;
-    width: calc(100vw - 6rem);
+    width: calc(100vw - 35rem);
     border-bottom: 0.15rem solid $GrayishBlue;
 }
 
@@ -19,6 +19,12 @@
 @media (max-width: 450px) {
     .header--container {
         width: calc(100vw - 4rem);
+    }
+}
+
+@media (max-width: 786px) {
+    .header--container {
+        width: calc(100vw - 6rem);
     }
 }
 

@@ -41,7 +41,7 @@ function Header({ productInfo, count, setProductInfo }) {
   window.addEventListener("resize", (e) => {
     const nav = document.querySelector(".nav--mobile");
     const bgOpacity = document.querySelector(".bg-opacity");
-    if (screen.width >= 1439) {
+    if (screen.width >= 1440) {
       nav.style.transform = `translateX(0%)`;
       bgOpacity.style.visibility = "hidden";
     } else {
