@@ -58,18 +58,21 @@
     }
 }
 
-.header__img-avatar {
-    width: 4rem;
-}
+.header__img-avatar-container {
+    border-radius: 50%;
+    border: 2px solid $White;
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: all 350ms;
+    cursor: pointer;
 
+    &:hover {
 
-@media (max-width:786px) {
-    .header__img-avatar {
-        width: 2.8rem;
+        border: 2px solid $Orange;
     }
-
-
 }
+
+
 
 .header__img-logo {
     padding-bottom: 5px;
@@ -220,16 +223,16 @@
     justify-content: center;
     padding: 0.6rem 0.8rem 0.5rem 0.8rem;
     position: absolute;
-    top: 7px;
-    right: 68px;
+    top: 5px;
+    right: 64px;
 
 }
 
 @media (min-width:1440px) {
 
     .cart-count {
-        top: 7px;
-        right: 59px;
+        top: 5px;
+        right: 55px;
     }
 
 }
@@ -237,8 +240,8 @@
 
 @media (max-width:786px) {
     .cart-count {
-        top: 1px;
-        right: 42px;
+        top: 5px;
+        right: 50px;
     }
 
 }
