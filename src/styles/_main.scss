@@ -194,6 +194,8 @@ input[type=number] {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        min-height: 70rem;
+        width: 100vw;
     }
 
 
@@ -202,8 +204,7 @@ input[type=number] {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        max-width: calc(100% - 35rem);
+        max-width: 1440px;
     }
 
     .main__product--desktop {
@@ -230,12 +231,15 @@ input[type=number] {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transform: translateX(-400%);
 
     }
 
     .btn {
         position: absolute;
-        z-index: 1000;
+        z-index: 6;
+        width: 5rem;
+        height: 5rem;
     }
 
     .btn-next {

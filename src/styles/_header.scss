@@ -77,6 +77,7 @@
 .header__img-logo {
     padding-bottom: 5px;
     margin-right: 5rem;
+    height: 2.2rem;
 }
 
 
@@ -223,25 +224,27 @@
     justify-content: center;
     padding: 0.6rem 0.8rem 0.5rem 0.8rem;
     position: absolute;
-    top: 5px;
-    right: 64px;
-
+    top: 7px;
+    right: 68px;
 }
 
-@media (min-width:1440px) {
+
+
+@media (max-width:1439px) {
 
     .cart-count {
-        top: 5px;
-        right: 55px;
+        top: 7px;
+        right: 83px;
     }
 
 }
 
 
+
 @media (max-width:786px) {
     .cart-count {
-        top: 5px;
-        right: 50px;
+        top: 7px;
+        right: 63px;
     }
 
 }
