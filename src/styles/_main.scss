@@ -22,14 +22,11 @@
 
 .carousel {
     overflow: hidden;
-    position: relative;
     width: 100%;
 }
 
 .btn {
-
-    position: absolute;
-    z-index: 1;
+    position: fixed;
     cursor: pointer;
     border-radius: 50%;
     background-color: white;
@@ -197,7 +194,6 @@ input[type=number] {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
     }
 
 
@@ -208,24 +204,51 @@ input[type=number] {
         justify-content: center;
         width: 100vw;
         max-width: calc(100% - 35rem);
-        height: 100vh;
-        min-height: 100vh;
     }
 
     .main__product--desktop {
         display: flex;
         flex-direction: column;
-        height: 100vh;
         width: 50%;
-        max-height: calc(100vh - 10rem);
         align-content: center;
         justify-content: center;
         padding-left: 10rem;
     }
 
+
     .carousel {
+        border-radius: 2rem;
+
+    }
+
+    .container__carousel {
+        position: fixed;
+        transform: translateX(0%);
+        max-width: 55rem;
+        top: 12rem;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .btn {
         position: absolute;
-        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .btn-next {
+        right: -2rem;
+        top: 28rem;
+    }
+
+
+
+    .btn-previous {
+        left: -2rem;
+        top: 28rem;
+
     }
 
     .main__product-info {
@@ -254,7 +277,7 @@ input[type=number] {
 
         img {
             border-radius: 1rem;
-            outline: 3px solid $White;
+            outline: 3px solid rgba(255, 0, 0, 0);
             transition: all 350ms;
             cursor: pointer;
 
