@@ -36,6 +36,13 @@
     background-color: white;
     top: 50%;
     z-index: 6;
+
+    &:hover {
+        path {
+            stroke: $Orange;
+        }
+
+    }
 }
 
 
@@ -202,6 +209,10 @@ input[type=number] {
     display: none;
 }
 
+.img-product {
+    cursor: pointer;
+}
+
 @media(min-width:1000px) {
     .main {
         flex-direction: row;
@@ -233,20 +244,22 @@ input[type=number] {
 
     .carousel {
         border-radius: 2rem;
-
-
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
     }
 
     .container__carousel {
         position: fixed;
-        transform: translateX(0%);
+        transform: translateY(-200%);
         max-width: 35rem;
         top: 12rem;
         z-index: 5;
         display: flex;
         align-items: center;
         flex-direction: column;
-
+        transition: all 350ms;
     }
 
 
@@ -291,6 +304,7 @@ input[type=number] {
         margin-top: 2rem;
         width: 100%;
         max-width: 50rem;
+        transition: all 350ms;
 
 
         img {
@@ -358,5 +372,27 @@ input[type=number] {
     .main_product-discount {
         font-size: 1.5rem;
     }
+
+}
+
+
+.icon-close-carousel {
+    position: absolute;
+    z-index: 7;
+    top: -4rem;
+    right: 0;
+    transform: scale(1.5);
+
+    path {
+        fill: $White;
+
+        cursor: pointer;
+
+        &:hover {
+            fill: $Orange
+        }
+    }
+
+
 
 }

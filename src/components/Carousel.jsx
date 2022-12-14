@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ImgProduct1 from "../assets/image-product-1.jpg";
 import ImgProduct2 from "../assets/image-product-2.jpg";
 import ImgProduct3 from "../assets/image-product-3.jpg";
@@ -10,6 +9,7 @@ import ImgProduct1Thumbnail from "../assets/image-product-1.jpg";
 import ImgProduct2Thumbnail from "../assets/image-product-2.jpg";
 import ImgProduct3Thumbnail from "../assets/image-product-3.jpg";
 import ImgProduct4Thumbnail from "../assets/image-product-4.jpg";
+import IconCloseCarousel from "../components/Icons/IconCloseCarousel";
 
 function Carousel() {
   let position = 0;
@@ -26,10 +26,18 @@ function Carousel() {
     photos.style.transform = `translateX(${position * 25}%)`;
   };
 
+  function hiddenGallery() {
+    const carrusel = document.querySelector(".container__carousel");
+    const bgOpacity = document.querySelector(".bg-opacity");
+    carrusel.style.transform = `translateY(-200%)`;
+    bgOpacity.style.visibility = "hidden";
+  }
+
   return (
     <div className="container__carousel">
       <IconPrevious handlePrevious={handlePrevious} />
       <IconNext handleNext={handleNext} />
+      <IconCloseCarousel hiddenGallery={hiddenGallery} />
       <section className="carousel">
         <section className="main__products">
           <img
