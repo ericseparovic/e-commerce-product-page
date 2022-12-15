@@ -39,8 +39,6 @@ function Carousel() {
     const AllGallery = document.querySelectorAll(".img-thumbnail-carousel");
 
     AllGallery.forEach((photo) => {
-      console.log(photo.id);
-      console.log(position);
       if (Number(photo.id) == position) {
         photo.classList.add("img-thumbnail-carousel--active");
       } else {
