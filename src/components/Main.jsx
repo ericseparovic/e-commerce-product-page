@@ -23,7 +23,6 @@ function Main({ setProductInfo, handleCountMinus, handleCountPlus, count }) {
   function handleChangePhoto(e) {
     const gallery = document.querySelector(".img-product");
     const AllGallery = document.querySelectorAll(".img-thumbnail");
-    console.log(AllGallery);
 
     AllGallery.forEach((photo) => {
       if (e.target.alt == photo.alt) {

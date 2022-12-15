@@ -18,14 +18,14 @@ function Carousel() {
     let photos = document.querySelector(".main__products");
     if (position > -3) position--;
     photos.style.transform = `translateX(${position * 25}%)`;
-    handleChangePhoto(position);
+    ChangePhoto(position);
   };
 
   const handlePrevious = (e) => {
     let photos = document.querySelector(".main__products");
     if (position < 0) position++;
     photos.style.transform = `translateX(${position * 25}%)`;
-    handleChangePhoto(position);
+    ChangePhoto(position);
   };
 
   function hiddenGallery() {
@@ -35,7 +35,7 @@ function Carousel() {
     bgOpacity.style.visibility = "hidden";
   }
 
-  function handleChangePhoto(position) {
+  function ChangePhoto(position) {
     const AllGallery = document.querySelectorAll(".img-thumbnail-carousel");
 
     AllGallery.forEach((photo) => {
