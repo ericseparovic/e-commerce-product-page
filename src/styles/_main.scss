@@ -310,18 +310,25 @@ input[type=number] {
         img {
             border-radius: 1rem;
             outline: 3px solid rgba(255, 0, 0, 0);
-            transition: all 350ms;
+            transition: opacity 350ms;
             cursor: pointer;
 
             &:hover {
-                outline: 3px solid $Orange;
                 opacity: 0.5;
             }
 
         }
     }
 
+    .img-thumbnail--active {
+        opacity: 0.5;
+        border: 3px solid $Orange;
+    }
 
+    .img-thumbnail-carousel--active {
+        opacity: 0.5;
+        border: 3px solid $Orange;
+    }
 
     .main__product-description {
         font-size: 2rem;

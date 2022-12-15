@@ -22,6 +22,16 @@ function Main({ setProductInfo, handleCountMinus, handleCountPlus, count }) {
 
   function handleChangePhoto(e) {
     const gallery = document.querySelector(".img-product");
+    const AllGallery = document.querySelectorAll(".img-thumbnail");
+    console.log(AllGallery);
+
+    AllGallery.forEach((photo) => {
+      if (e.target.alt == photo.alt) {
+        photo.classList.add("img-thumbnail--active");
+      } else {
+        photo.classList.remove("img-thumbnail--active");
+      }
+    });
 
     if (e.target.nodeName !== "IMG") {
       return;
@@ -69,21 +79,25 @@ function Main({ setProductInfo, handleCountMinus, handleCountPlus, count }) {
               onClick={handleChangePhoto}
               src={ImgProduct1Thumbnail}
               alt="img-1"
+              className="img-thumbnail img-thumbnail--active"
             />
             <img
               onClick={handleChangePhoto}
               src={ImgProduct2Thumbnail}
               alt="img-2"
+              className="img-thumbnail"
             />
             <img
               onClick={handleChangePhoto}
               src={ImgProduct3Thumbnail}
               alt="img-3"
+              className="img-thumbnail"
             />
             <img
               onClick={handleChangePhoto}
               src={ImgProduct4Thumbnail}
               alt="img-4"
+              className="img-thumbnail"
             />
           </div>
         </div>

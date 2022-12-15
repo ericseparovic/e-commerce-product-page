@@ -18,12 +18,14 @@ function Carousel() {
     let photos = document.querySelector(".main__products");
     if (position > -3) position--;
     photos.style.transform = `translateX(${position * 25}%)`;
+    handleChangePhoto(position);
   };
 
   const handlePrevious = (e) => {
     let photos = document.querySelector(".main__products");
     if (position < 0) position++;
     photos.style.transform = `translateX(${position * 25}%)`;
+    handleChangePhoto(position);
   };
 
   function hiddenGallery() {
@@ -33,6 +35,19 @@ function Carousel() {
     bgOpacity.style.visibility = "hidden";
   }
 
+  function handleChangePhoto(position) {
+    const AllGallery = document.querySelectorAll(".img-thumbnail-carousel");
+
+    AllGallery.forEach((photo) => {
+      console.log(photo.id);
+      console.log(position);
+      if (Number(photo.id) == position) {
+        photo.classList.add("img-thumbnail-carousel--active");
+      } else {
+        photo.classList.remove("img-thumbnail-carousel--active");
+      }
+    });
+  }
   return (
     <div className="container__carousel">
       <IconPrevious handlePrevious={handlePrevious} />
@@ -63,10 +78,30 @@ function Carousel() {
         </section>
       </section>
       <div className="main__product-gallery">
-        <img src={ImgProduct1Thumbnail} alt="img-1" />
-        <img src={ImgProduct2Thumbnail} alt="img-2" />
-        <img src={ImgProduct3Thumbnail} alt="img-3" />
-        <img src={ImgProduct4Thumbnail} alt="img-4" />
+        <img
+          src={ImgProduct1Thumbnail}
+          alt="img-1"
+          className="img-thumbnail-carousel img-thumbnail-carousel--active"
+          id="0"
+        />
+        <img
+          src={ImgProduct2Thumbnail}
+          alt="img-2"
+          className="img-thumbnail-carousel"
+          id="-1"
+        />
+        <img
+          src={ImgProduct3Thumbnail}
+          alt="img-3"
+          className="img-thumbnail-carousel"
+          id="-2"
+        />
+        <img
+          src={ImgProduct4Thumbnail}
+          alt="img-4"
+          className="img-thumbnail-carousel"
+          id="-3"
+        />
       </div>
     </div>
   );
