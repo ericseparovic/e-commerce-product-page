@@ -15,9 +15,7 @@ function ProductInfo({
     const titleHTML = productInfoHTML.querySelector(
       ".main__product-info-h1"
     ).innerHTML;
-    const costHTML = productInfoHTML.querySelector(
-      ".main__product-cost"
-    ).innerHTML;
+    const costHTML = productInfoHTML.querySelector("#main_cost").innerHTML;
     const countHTML = productInfoHTML.querySelector(
       ".main__product-input"
     ).value;
@@ -43,7 +41,9 @@ function ProductInfo({
       </p>
       <div className="main__product-info-cost">
         <div className="main__product-cost-porcent">
-          <p className="main__product-cost">$125</p>
+          <p className="main__product-cost">
+            <span>$</span> <span id="main_cost">125</span>
+          </p>
           <p className="main__product-porcent">50%</p>
         </div>
         <p className="main_product-discount">$250</p>
