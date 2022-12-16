@@ -12,7 +12,7 @@
     max-width: 1440px;
     position: relative;
     width: calc(100vw - 20rem);
-    border-bottom: 0.15rem solid $GrayishBlue;
+    border-bottom: .10rem solid hsl(220, 14%, 86%);
 }
 
 
@@ -161,7 +161,7 @@
         height: 100%;
         display: flex;
         align-items: center;
-        border-bottom: .5rem solid transparent;
+        border-bottom: .5rem solid $White;
 
         &:hover {
 
