@@ -42,7 +42,7 @@ function ProductInfo({
       <div className="main__product-info-cost">
         <div className="main__product-cost-porcent">
           <p className="main__product-cost">
-            <span>$</span> <span id="main_cost">125</span>
+            <span>$</span> <span id="main_cost">125.00</span>
           </p>
           <p className="main__product-porcent">50%</p>
         </div>

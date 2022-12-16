@@ -74,6 +74,7 @@
 .main__product-info-h1 {
     font-size: 2.8rem;
     margin-bottom: 2rem;
+    line-height: 4.5rem;
 }
 
 .main__product-description {
@@ -233,7 +234,7 @@ input[type=number] {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 1440px;
+        max-width: 1200px;
         width: calc(100vw - 15rem);
         gap: 4rem;
     }
